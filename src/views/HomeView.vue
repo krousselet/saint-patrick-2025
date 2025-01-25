@@ -1,18 +1,22 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <HomeComponent>
+  </HomeComponent>
+  <RevealComponent></RevealComponent>
+  <InfiniteScrollComponent></InfiniteScrollComponent>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import HomeComponent from '@/components/HomeComponent.vue';
+import InfiniteScrollComponent from '@/components/InfiniteScrollComponent.vue';
+import RevealComponent from '@/components/RevealComponent.vue';
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    HomeComponent,
+    InfiniteScrollComponent,
+    RevealComponent
   }
 }
 </script>
