@@ -1,7 +1,7 @@
 <template>
     <h2 class="block-effect" style="--td: 1.2s">
-    <div class="block-reveal" style="--bc: #4040bf; --d: .1s">SAINT PATRICK'S</div>
-    <div class="block-reveal" style="--bc: #bf4060; --d: .5s">NIGHT</div>
+    <div class="block-reveal" style="--bc: green; --d: .1s">SAINT PATRICK</div>
+    <div class="block-reveal" style="--bc: lime; --d: .5s">EVENEMENT</div>
     </h2>
   </template>
   
@@ -36,6 +36,7 @@ p {
 
   position: relative;
   overflow: hidden;
+  border-radius: 7px;
 
   animation: revealBlock 0s var(--t) forwards;
 }
@@ -46,6 +47,7 @@ p {
   width: 0%;
   height: 100%;
   padding-bottom: 4px;
+  border-radius: 7px;
 
   position: absolute;
   top: 0;

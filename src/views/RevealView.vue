@@ -10,7 +10,7 @@
     name: 'HomeView',
     components: {
       RevealComponent
-    }
+    },
   }
   </script>
   

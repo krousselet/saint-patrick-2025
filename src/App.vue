@@ -17,6 +17,37 @@ h1 {
   font-family: "UnifrakturCook", serif;
 }
 
+// SCROLLBARS
+
+::-webkit-scrollbar {
+  width: .2vw;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: lime;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+/* Target specific elements */
+.my-scrollable-element::-webkit-scrollbar {
+  width: 8px;
+}
+
+.my-scrollable-element::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+
+.my-scrollable-element::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
 // MEDIA QUERIES
 @media (min-width:320px) and (max-width:991px) {
   h1 {
@@ -52,12 +83,13 @@ h1 {
 
 }
 .images-container {
-  margin-bottom: 25px;
+    margin-bottom: 25px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     align-items: center;
-  }
+    
+}
 nav {
   display: flex;
   justify-content: space-around;
@@ -72,6 +104,14 @@ nav {
     &.router-link-exact-active {
       color: rgba(255, 0, 0, 0.833);
     }
+  }
+}
+
+//KEYFRAMES
+
+@keyframes opacity {
+  100% {
+    opacity: 1;
   }
 }
 </style>
