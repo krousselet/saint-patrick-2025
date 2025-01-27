@@ -13,8 +13,18 @@ body {
   background-color: black;
 }
 
-h1 {
+.title-container {
   font-family: "UnifrakturCook", serif;
+}
+
+li {
+  list-style: none;
+  margin: 1vw auto;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 // SCROLLBARS
@@ -106,6 +116,8 @@ nav {
     }
   }
 }
+
+
 
 //KEYFRAMES
 
