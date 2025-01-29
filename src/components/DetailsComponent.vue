@@ -9,6 +9,7 @@
       pagination="true"
       css-mode="true"
       space-between="20"
+      
     >
     <swiper-slide>
         <h2>Commencement</h2>
@@ -24,7 +25,7 @@
         <ul>
             <li><a href="https://www.facebook.com/4.Squared.Circles/" target="_blank">4 squared circles</a></li>
             <li><a href="https://www.facebook.com/p/Boddah-Quest-tribute-Nirvana-100078758354425/" target="_blank">Boddah</a></li>
-            <li>Valkyrie</li>
+            <li class="font">Valkyrie</li>
         </ul>
       </swiper-slide>
       <swiper-slide>
@@ -71,4 +72,17 @@
     a {
         color: lime;
     }
+
+    swiper-container::part(bullet-active) {
+      background-color: lime;
+    }
+
+    swiper-container::part(bullet) {
+      background-color: red;
+    }
+
+    swiper-container::part(button-prev), swiper-container::part(button-next) {
+      color: lime;
+    }
+    
 </style>

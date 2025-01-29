@@ -8,9 +8,9 @@
             <h2>Skull darts 71 ?</h2>
         </div>
         <div class="text">
-            <p>Skull Darts est une association de fléchettes regroupant des participants amateurs.</p>
-            <p>Elle est basée dans le village de <a href="https://www.bressenordintercom.fr/communes/bellevesvre/" target="_blank"><span id="bellevesvres">Bellevesvres</span></a>.</p>
-            <p>Celle-ci compte actuellement {{ membres }} membres, mais nous accueillons à bras ouverts chaque nouvelle personne.</p>
+            <p class=".text-one">Skull Darts est une association de fléchettes regroupant des participants amateurs.</p>
+            <p class=".text-two" >Elle est basée dans le village de <a href="https://www.bressenordintercom.fr/communes/bellevesvre/" target="_blank"><span id="bellevesvre">Bellevesvre</span></a>.</p>
+            <p class=".text-three">Celle-ci compte actuellement {{ membres }} membres, mais nous accueillons à bras ouverts chaque nouvelle personne.</p>
         </div>
       </div>
       
@@ -56,44 +56,79 @@ import skullDesktopSrc from "../assets/images/logos/logos-desktop/skull.png";
   
   <style scoped lang="scss">
 
-  #bellevesvres {
+.skull-container {
+    opacity: 0;
+    animation: opacity 1s .2s ease-in-out forwards;
+}
+
+.title-container {
+  opacity: 0;
+  animation: opacity 1s .5s ease-in-out forwards;
+}
+
+.text {
+  opacity: 0;
+  animation: opacity 1s .7s ease-in-out forwards;
+}
+
+.text-one {
+  opacity: 0;
+  animation: opacity 1s .9s ease-in-out forwards;
+}
+
+.text-two {
+  opacity: 0;
+  animation: opacity 1s 1.1s ease-in-out forwards;
+}
+
+.text-three {
+  opacity: 0;
+  animation: opacity 1s 1.3s ease-in-out forwards;
+}
+
+
+  #bellevesvre {
     color: lime;
   }
 
-  @media (min-width: 992px) {
-
-    @media (min-width:992px) {
-  main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    }
-    
-      .skull-container {
-          width: 100%;
-  
-          img {
-              width: 75%;
-              border-radius: 25%;
-          }
-      }
-
-      .informations {
-
-        margin: 10vw auto;
-
-          .title-container {
-            font-size: 3rem;
-          }
-
-          .text {
-
-            p {
-                margin-bottom: 2vw;
-                font-size: 1.2rem;
-            }
-          }
-      }
+  @media (min-width:320px) and (max-width:991px) {
+    .skull-container {
+      margin-top: 5vw;
     }
   }
+
+
+  @media (min-width:992px) {
+    main {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      }
+      
+        .skull-container {
+            width: 100%;
+    
+            img {
+                width: 75%;
+                border-radius: 25%;
+            }
+        }
+
+        .informations {
+
+          margin: 10vw auto;
+
+            .title-container {
+              font-size: 3rem;
+            }
+
+            .text {
+
+              p {
+                  margin-bottom: 2vw;
+                  font-size: 1.2rem;
+              }
+            }
+        }
+      }
   </style>

@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="glass-nav">
     <router-link to="/">Home</router-link>
     <router-link to="/about">Description</router-link>
     <router-link to="/details">Details</router-link>
@@ -8,13 +8,27 @@
 </template>
 
 <style lang="scss">
+
+.glass-nav {
+  position: relative;
+  z-index: 5;
+  background: rgb(0, 0, 0); /* Semi-transparent white */
+  border-radius: 15px;
+  backdrop-filter: blur(50px); /* Glass effect */
+  box-shadow: 0 4px 10px rgba(28, 195, 40, 0.804);
+  transition: all 0.3s ease-in-out;
+}
+
+
 // GENERAL
 body {
   background-color: black;
 }
 
-.title-container {
-  font-family: "UnifrakturCook", serif;
+.title-container  {
+  font-family: "MedievalSharp", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 li {
@@ -25,6 +39,12 @@ li {
 a {
   text-decoration: none;
   color: white;
+  font-family: "MedievalSharp", serif;
+  font-size: 1.5rem;
+}
+
+.font {
+  font-family: "MedievalSharp", serif;
 }
 
 // SCROLLBARS
@@ -62,6 +82,10 @@ a {
 @media (min-width:320px) and (max-width:991px) {
   h1 {
     font-size: 1.8rem;
+  }
+
+  a {
+    font-size: 19px;
   }
 }
 @media (min-width:992px) and (max-width:2048px) {

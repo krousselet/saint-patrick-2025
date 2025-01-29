@@ -20,17 +20,17 @@
 </div>
         <div class="loop-slider" style="--duration:19260ms; --direction:reverse;">
           <div class="inner">
-            <div class="tag"><span>#</span> SaintPatrick</div>
-            <div class="tag"><span>#</span> Bière</div>
-            <div class="tag"><span>#</span> Fléchettes</div>
-            <div class="tag"><span>#</span> Amis</div>
-            <div class="tag"><span>#</span> Fête</div>
+            <div class="tag"><span>🍀</span> SaintPatrick</div>
+            <div class="tag"><span>🍀</span> Bière</div>
+            <div class="tag"><span>🍀</span> Fléchettes</div>
+            <div class="tag"><span>🍀</span> Amis</div>
+            <div class="tag"><span>🍀</span> Fête</div>
             <!-- duplicated content -->
-            <div class="tag"><span>#</span> SaintPatrick</div>
-            <div class="tag"><span>#</span> Bière</div>
-            <div class="tag"><span>#</span> Fléchettes</div>
-            <div class="tag"><span>#</span> Amis</div>
-            <div class="tag"><span>#</span> Fête</div>
+            <div class="tag"><span>🍀</span> SaintPatrick</div>
+            <div class="tag"><span>🍀</span> Bière</div>
+            <div class="tag"><span>🍀</span> Fléchettes</div>
+            <div class="tag"><span>🍀</span> Amis</div>
+            <div class="tag"><span>🍀</span> Fête</div>
           </div>
         </div>
     </footer>
