@@ -1,7 +1,7 @@
 <template>
     <swiper-container
     :breakpoints="swiperBreakpoints"
-      slides-per-view="3"
+      slides-per-view="5"
       speed="1500"
       loop="true"
       autoplay="false"
@@ -12,25 +12,39 @@
       
     >
     <swiper-slide>
-        <h2>Commencement</h2>
-        <p>La soirée débute à 19h</p>
+        <h2>Général</h2>
+        <ul>
+          <li>15 Mars</li>
+          <li>2 Rue des Granges</li>
+          <li><a href="https://www.bressenordintercom.fr/communes/bellevesvre/" target="_blank">Bellevesvre</a></li>
+          <li>19h</li>
+          <li>150 places disponibles</li>
+        </ul>
     </swiper-slide>
     <swiper-slide>
         <h2>Prix</h2>
-        <p>Le prix d'entrée est de x euros</p>
-      </swiper-slide>
-      <swiper-slide>
-        <h2>Déroulement</h2>
-        <p>Trois groupes sont programmés :</p>
         <ul>
-            <li><a href="https://www.facebook.com/4.Squared.Circles/" target="_blank">4 squared circles</a></li>
-            <li><a href="https://www.facebook.com/p/Boddah-Quest-tribute-Nirvana-100078758354425/" target="_blank">Boddah</a></li>
-            <li class="font">Valkyrie</li>
+          <li>L'entrée est à 5 euros</li>
+          <li>1 kilt = une boisson offerte</li>
+          <li>La consommation d'alcool est <br> <span class="forbidden">interdite</span> <br> aux mineurs</li>
         </ul>
       </swiper-slide>
       <swiper-slide>
-        <h2>Bonus</h2>
-        <p>Un kilt = une boisson offerte</p>
+        <h2>Déroulement</h2>
+        <ul>
+          <li>Trois groupes sont programmés :</li>
+          <li><a href="https://www.facebook.com/4.Squared.Circles/" target="_blank">4 squared circles</a></li>
+          <li><a href="https://www.facebook.com/p/Boddah-Quest-tribute-Nirvana-100078758354425/" target="_blank">Boddah</a></li>
+          <li class="font">Valkyrie</li>
+        </ul>
+      </swiper-slide>
+      <swiper-slide>
+        <h2>Rappel</h2>
+        <ul>
+          <li>L'événement est sur réservation</li>
+          <li>L'événement doit se passer dans la convivialité</li>
+          <li>La consommation d'alcool doit rester raisonnable</li>
+        </ul>
     </swiper-slide>
     </swiper-container>
   </template>
@@ -51,13 +65,17 @@
         slidesPerView: 1,
         spaceBetween: 10,
       },
-      640: { // Medium devices
-        slidesPerView: 2,
-        spaceBetween: 15,
-      },
       768: { // Tablets
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      991: { // Tablets
         slidesPerView: 3,
         spaceBetween: 20,
+      },
+      2048: { // Tablets
+        slidesPerView: 4,
+        spaceBetween: 30,
       },
     };
 
@@ -69,9 +87,65 @@
   </script>
 
 <style scoped lang="scss">
+
+// ********************** GENERAL
     a {
         color: lime;
     }
+
+    .forbidden {
+      animation: shake 1.2s ease-in-out 3s 3;
+      color: red;
+      position: relative;
+      left: 0;
+      text-transform: uppercase;
+    }
+
+    // ********************** MEDIA
+
+    @media (min-width:320px) and (max-width:991px) {
+
+      h2 {
+        letter-spacing: 5px;
+      }
+      li {
+        margin: 8vw auto;
+        line-height: 40px;
+      }
+      ul .font {
+        letter-spacing: 5px;
+      }
+    }
+
+    @media (min-width:991px) and (max-width:2048px) {
+
+      h2 {
+        letter-spacing: 7px;
+        font-size: 2rem;
+      }
+      li {
+        margin: 4vw auto;
+      }
+      ul .font {
+        letter-spacing: 5px;
+      }
+    }
+
+    @media (min-width:2048px) {
+
+      h2 {
+        letter-spacing: 25px;
+        font-size: 3rem;
+      }
+      li {
+        margin: 2vw auto;
+      }
+      ul .font {
+        letter-spacing: 5px;
+      }
+    }
+
+    // *************************SWIPER
 
     swiper-container::part(bullet-active) {
       background-color: lime;
@@ -85,4 +159,20 @@
       color: lime;
     }
     
+    //******************* */ Animation
+
+    @keyframes shake {
+      23% {
+        left: -2vw;
+      }
+      48% {
+        left: 2vw;
+      }
+      73% {
+        left: -2vw;
+      }
+      98% {
+        left: 0;
+      }
+    }
 </style>

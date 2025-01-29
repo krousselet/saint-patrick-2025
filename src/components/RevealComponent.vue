@@ -1,16 +1,18 @@
 <template>
     <h2 class="block-effect" style="--td: 1.2s">
-    <div class="block-reveal" style="--bc: green; --d: .1s">SAINT PATRICK</div>
-    <div class="block-reveal" style="--bc: lime; --d: .5s">EVENEMENT</div>
+    <div class="block-reveal" style="--bc: green; --d: .1s">{{ textOne }}</div>
+    <div class="block-reveal" style="--bc: lime; --d: .5s">{{textTwo}}</div>
     </h2>
   </template>
   
   <script>
   export default {
     name: 'RevealComponent',
-    props: {
-      textOne: String,
-      textTwo: String,
+    data() {
+      return {
+        textOne: "Saint Patrick",
+        textTwo: "Evénement"
+      }
     }
   }
   </script>

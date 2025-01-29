@@ -30,10 +30,16 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-
-li {
-  list-style: none;
-  margin: 1vw auto;
+ul {
+  margin: 0;
+  padding: 0;
+  
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin: 1vw auto;
+  }
 }
 
 a {

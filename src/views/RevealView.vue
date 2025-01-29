@@ -1,5 +1,5 @@
 <template>
-    <RevealComponent></RevealComponent>
+    <RevealComponent :textOne="textOne" :textTwo="textTwo"></RevealComponent>
   </template>
   
   <script>
@@ -11,6 +11,10 @@
     components: {
       RevealComponent
     },
+    props: {
+      textOne: String,
+      textTwo: String,
+    }
   }
   </script>
   

@@ -8,9 +8,11 @@
             <h2>Skull darts 71 ?</h2>
         </div>
         <div class="text">
-            <p class=".text-one">Skull Darts est une association de fléchettes regroupant des participants amateurs.</p>
-            <p class=".text-two" >Elle est basée dans le village de <a href="https://www.bressenordintercom.fr/communes/bellevesvre/" target="_blank"><span id="bellevesvre">Bellevesvre</span></a>.</p>
-            <p class=".text-three">Celle-ci compte actuellement {{ membres }} membres, mais nous accueillons à bras ouverts chaque nouvelle personne.</p>
+          <p class="text-zero">Skull Darts 71 est née en 2023.</p>
+          <p class="text-one">Il s'agit d'une association de fléchettes regroupant des participants amateurs.</p>
+          <p class="text-two" >Elle est basée dans le village de <a href="https://www.bressenordintercom.fr/communes/bellevesvre/" target="_blank"><span id="bellevesvre">Bellevesvre</span></a>.</p>
+          <p class="text-three">Celle-ci compte actuellement {{ membres }} membres, mais nous accueillons à bras ouverts chaque nouvelle personne.</p>
+          <p class="text-four">Nous nous retrouvons le vendredi soir, où le but essentiel est de se reposer et de rire dans la convivialité et la bonne humeur.</p>
         </div>
       </div>
       
@@ -58,7 +60,7 @@ import skullDesktopSrc from "../assets/images/logos/logos-desktop/skull.png";
 
 .skull-container {
     opacity: 0;
-    animation: opacity 1s .2s ease-in-out forwards;
+    animation: opacity 1s .3s ease-in-out forwards;
 }
 
 .title-container {
@@ -67,6 +69,12 @@ import skullDesktopSrc from "../assets/images/logos/logos-desktop/skull.png";
 }
 
 .text {
+  opacity: 0;
+  animation: opacity 1s .5s ease-in-out forwards;
+  text-align: justify;
+}
+
+.text-zero {
   opacity: 0;
   animation: opacity 1s .7s ease-in-out forwards;
 }
@@ -86,6 +94,11 @@ import skullDesktopSrc from "../assets/images/logos/logos-desktop/skull.png";
   animation: opacity 1s 1.3s ease-in-out forwards;
 }
 
+.text-four {
+  opacity: 0;
+  animation: opacity 1s 1.5s ease-in-out forwards;
+}
+
 
   #bellevesvre {
     color: lime;
@@ -95,6 +108,21 @@ import skullDesktopSrc from "../assets/images/logos/logos-desktop/skull.png";
     .skull-container {
       margin-top: 5vw;
     }
+
+    .informations {
+      margin: 5vw auto;
+
+      .text {
+        max-width: 550px;
+        margin: 0 auto;
+        text-align: center;
+  
+        p {
+          line-height: 30px;
+        }
+      }
+    }
+
   }
 
 
