@@ -13,7 +13,7 @@
         <h2>Général</h2>
         <ul>
           <li>15 Mars</li>
-          <li>2 Rue des Granges</li>
+          <li>1 Rue des Granges, Salle des fêtes</li>
           <li><a href="https://www.bressenordintercom.fr/communes/bellevesvre/" target="_blank">Bellevesvre</a></li>
           <li>19h</li>
           <li>150 places disponibles</li>
@@ -31,9 +31,9 @@
         <h2>Déroulement</h2>
         <ul>
           <li>Trois groupes sont programmés :</li>
-          <li><a href="https://www.facebook.com/4.Squared.Circles/" target="_blank">4 squared circles</a></li>
-          <li><a href="https://www.facebook.com/p/Boddah-Quest-tribute-Nirvana-100078758354425/" target="_blank">Boddah</a></li>
           <li class="font">Valkyrie</li>
+          <li><a href="https://www.facebook.com/4.Squared.Circles/" target="_blank">4 squared circles</a></li>
+          <li><a href="https://www.facebook.com/p/Boddah-Quest-tribute-Nirvana-100078758354425/" target="_blank">Boddah Nirvanah Tribute</a></li>
         </ul>
       </swiper-slide>
       <swiper-slide>
@@ -42,6 +42,25 @@
           <li>L'événement doit se passer dans la convivialité</li>
           <li>La consommation d'alcool doit rester raisonnable</li>
           <li>L'événement est accessible dans la limite des places disponibles</li>
+        </ul>
+    </swiper-slide>
+    <swiper-slide>
+        <h2>Bonus</h2>
+        <ul>
+          <li>Le happy quart d'heure permettra de gagner une boisson en faisant un centre sur la cible (3 essais par participant)</li>
+          <li>Les bouchons d'oreilles sont fournis à l'entrée pour le concert (fortement conseillé)</li>
+        </ul>
+    </swiper-slide>
+    <swiper-slide>
+        <h2>Tarifs</h2>
+        <ul>
+          <li>Sandwichs : x euros</li>
+          <li>Bière blonde : x euros</li>
+          <li>Bière brune : x euros</li>
+          <li>Bière verte : x euros</li>
+          <li>Confiserie : x euros</li>
+          <li>Sodas : x euros</li>
+          <li>Eau : x euros</li>
         </ul>
     </swiper-slide>
     </swiper-container>
