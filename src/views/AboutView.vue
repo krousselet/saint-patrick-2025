@@ -1,6 +1,6 @@
 <template>
-  <AboutComponent :membres="11"></AboutComponent>
-  <InfiniteScrollComponent :items="['Nicolas', 'Mimie', 'Stephanie', 'Mireille', 'Damien', 'Christian', 'Solène', 'Janick', 'Sylvain']" />
+  <AboutComponent :membres="13"></AboutComponent>
+  <InfiniteScrollComponent :items="['Nicolas', 'Emilie', 'Stephanie', 'Mireille', 'Damien', 'Christian', 'Solène', 'Aurore', 'Janick', 'Sylvain', 'Kevin']" />
 </template>
 
 <script>

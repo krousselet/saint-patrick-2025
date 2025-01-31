@@ -1,7 +1,7 @@
 <template>
   <div class="loop-slider" style="--duration:19260ms; --direction:reverse;">
     <div class="inner">
-      <div v-for="(item, index) in duplicatedItems" :key="index" class="tag">
+      <div v-for="(item, index) in duplicatedItems" :key="index" class="tag font">
         <span>🍀</span> {{ item }}
       </div>
     </div>
@@ -42,7 +42,6 @@ export default {
 
 .tag {
   display: flex;
-  font-family: "UnifrakturCook", serif;
   align-items: center;
   gap: 0 0.2rem;
   color: #e2e8f0;

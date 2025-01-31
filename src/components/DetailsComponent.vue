@@ -1,14 +1,12 @@
 <template>
-    <swiper-container
+    <swiper-container class="font"
     :breakpoints="swiperBreakpoints"
       slides-per-view="5"
-      speed="1500"
       loop="true"
-      autoplay="false"
       navigation="true"
       pagination="true"
-      css-mode="true"
       space-between="20"
+      mousewheel-enabled="true"
       
     >
     <swiper-slide>
@@ -41,9 +39,9 @@
       <swiper-slide>
         <h2>Rappel</h2>
         <ul>
-          <li>L'événement est sur réservation</li>
           <li>L'événement doit se passer dans la convivialité</li>
           <li>La consommation d'alcool doit rester raisonnable</li>
+          <li>L'événement est accessible dans la limite des places disponibles</li>
         </ul>
     </swiper-slide>
     </swiper-container>
@@ -73,9 +71,10 @@
         slidesPerView: 3,
         spaceBetween: 20,
       },
-      2048: { // Tablets
+      2048: { // large
         slidesPerView: 4,
         spaceBetween: 30,
+
       },
     };
 
@@ -101,19 +100,35 @@
       text-transform: uppercase;
     }
 
+    ul li {
+      font-size: 1rem;
+    }
+
+    swiper-container {
+      opacity: 0;
+      animation: opacity .3s .3s ease forwards
+    }
+
     // ********************** MEDIA
 
     @media (min-width:320px) and (max-width:991px) {
 
       h2 {
         letter-spacing: 5px;
+        font-size: 1.5rem;
       }
-      li {
-        margin: 8vw auto;
-        line-height: 40px;
-      }
-      ul .font {
-        letter-spacing: 5px;
+
+      ul {
+        li {
+          margin: 8vw auto;
+          line-height: 40px;
+          font-size: 1.2rem;
+
+          a {
+            font-size: inherit;
+          }
+        }
+
       }
     }
 
@@ -121,13 +136,17 @@
 
       h2 {
         letter-spacing: 7px;
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
-      li {
+      
+      ul li {
         margin: 4vw auto;
-      }
-      ul .font {
-        letter-spacing: 5px;
+        font-size: 1.8rem;
+        line-height: 40px;
+
+        a {
+          font-size: inherit;
+        }
       }
     }
 
@@ -136,13 +155,16 @@
       h2 {
         letter-spacing: 25px;
         font-size: 3rem;
+        margin-bottom: 100px;
       }
-      li {
-        margin: 2vw auto;
+      ul li {
+      margin: 2vw auto;
+      font-size: 1.8rem;
+
+      a {
+        font-size: inherit;
       }
-      ul .font {
-        letter-spacing: 5px;
-      }
+    }
     }
 
     // *************************SWIPER

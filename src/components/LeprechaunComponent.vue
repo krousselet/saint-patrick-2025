@@ -142,6 +142,8 @@ export default {
     max-width: 1024px;
     max-height: 1024px;
     margin: 5vw auto;
+    opacity: 0;
+    animation: opacity .6s .6s ease forwards
 }
 
 @media (min-width:320px) and (max-width:991px) {
@@ -159,8 +161,8 @@ export default {
 
 @media (min-width:2049px) {
    .leprechaun-container {
-        width: 80%;
-        margin: 15vw auto;
+        width: 70%;
+        margin: 175px auto;
 
     }
 }
