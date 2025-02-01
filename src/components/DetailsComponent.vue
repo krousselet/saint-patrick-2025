@@ -52,15 +52,28 @@
         </ul>
     </swiper-slide>
     <swiper-slide>
-        <h2>Tarifs</h2>
+        <h2>Boissons Alcool</h2>
         <ul>
-          <li>Sandwichs : x euros</li>
-          <li>Bière blonde : x euros</li>
-          <li>Bière brune : x euros</li>
-          <li>Bière verte : x euros</li>
-          <li>Confiserie : x euros</li>
-          <li>Sodas : x euros</li>
-          <li>Eau : x euros</li>
+          <li>Bière blonde (25cl) : 2,5 euros</li>
+          <li>Bière ambrée (25cl) : 3,5 euros</li>
+          <li>Bière verte (25cl) : 3,5 euros</li>
+          <li>Pichet blonde : 9 euros</li>
+        </ul>
+    </swiper-slide>
+    <swiper-slide>
+        <h2>Boissons Sans Alcool</h2>
+        <ul>
+          <li>Bière : 2 euros</li>
+          <li>Coca, coca zéro, Orangina, Ice Tea, Oasis : 2 euros</li>
+          <li>Cristaline (0,5l) : 1 euros</li>
+        </ul>
+    </swiper-slide>
+    <swiper-slide>
+        <h2>Tarifs restauration</h2>
+        <ul>
+          <li>Hot dog : 3,5 euros</li>
+          <li>Sandwich : x euros</li>
+          <li>Confiseries : 1 euros</li>
         </ul>
     </swiper-slide>
     </swiper-container>
