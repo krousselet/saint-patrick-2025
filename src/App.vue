@@ -156,4 +156,16 @@ nav {
     opacity: 1;
   }
 }
+
+@keyframes left {
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes right {
+  100% {
+    right: 0;
+  }
+}
 </style>
