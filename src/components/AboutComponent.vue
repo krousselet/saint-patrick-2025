@@ -83,11 +83,11 @@ import groupDesktopSrc from "../assets/images/about/desktop/photo-groupe-desktop
 .image-container {
   position: relative;
   overflow-x: hidden;
-  img {
-    position: absolute;
-    left: 100%;
-    animation: left 1s .3s ease-in-out forwards;
-  }
+  // img {
+  //   position: absolute;
+  //   left: 100%;
+  //   animation: left 1s .3s ease-in-out forwards;
+  // }
 }
 
 .skull-container {
