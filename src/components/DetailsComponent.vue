@@ -66,7 +66,7 @@
     <swiper-slide>
         <h2>Boissons Sans Alcool</h2>
         <ul>
-          <li>Bière : 2 euros <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"></li>
+          <li>Bière 0% : 2,5 euros <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="yellowCoinSrc" alt="logo jeton jaune"></li>
           <li>Coca, coca zéro, Orangina, Ice Tea, Tropical : 2 euros <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"></li>
           <li>Cristaline (0,5l) : 1 euro <img :src="greenCoinSrc" alt="logo jeton vert"></li>
         </ul>
