@@ -23,6 +23,7 @@
         <h2>Prix</h2>
         <ul>
           <li>L'entrée est à 5 euros</li>
+          <li>Paiement par carte possible</li>
           <li>L'entrée est <span class="green">gratuite</span> pour les <span class="green"> - 12 ans</span> </li>
           <li>1 kilt = une boisson offerte</li>
           <li>La consommation d'alcool est <br> <span class="forbidden">interdite</span>aux mineurs</li>
@@ -32,9 +33,9 @@
         <h2>Déroulement</h2>
         <ul>
           <li>Trois groupes sont programmés :</li>
-          <li class="font">Valkyrie</li>
-          <li><a href="https://www.facebook.com/4.Squared.Circles/" target="_blank">4 squared circles</a></li>
-          <li><a href="https://www.facebook.com/p/Boddah-Quest-tribute-Nirvana-100078758354425/" target="_blank">Boddah Nirvanah Tribute</a></li>
+          <li class="font">Valkyrie (chanteuse Pop/Rock)</li>
+          <li><a href="https://www.facebook.com/4.Squared.Circles/" target="_blank">4 squared circles (Rock Français)</a></li>
+          <li><a href="https://www.facebook.com/p/Boddah-Quest-tribute-Nirvana-100078758354425/" target="_blank">Boddah Nirvanah Tribute (Hommage Nirvana)</a></li>
         </ul>
       </swiper-slide>
       <swiper-slide>
@@ -56,11 +57,10 @@
     <swiper-slide>
         <h2>Boissons Alcool</h2>
         <ul>
-          <li>Bière blonde (25cl) : 2,5 euros</li>
-          <li><img :src="blondeBeerSrc" alt="logo biere blonde"> 2,5 euros <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="yellowCoinSrc" alt="logo jeton jaune"></li>
-          <li><img :src="amberBeerSrc" alt="logo biere ambree"> : 3,5 euros <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="yellowCoinSrc" alt="logo jeton jaune"></li>
-          <li><img :src="wizardBeerSrc" alt="logo biere blonde"> : 3,5 euros <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="yellowCoinSrc" alt="logo jeton jaune"></li>
-          <li>Pichet blonde : 9 euros</li>
+          <li><img :src="blondeBeerSrc" alt="logo biere blonde"> 2,5 euros (25cl) <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="yellowCoinSrc" alt="logo jeton jaune"></li>
+          <li><img :src="amberBeerSrc" alt="logo biere ambree"> : 3,5 euros (25cl) <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="yellowCoinSrc" alt="logo jeton jaune"></li>
+          <li><img :src="wizardBeerSrc" alt="logo biere blonde"> : 3,5 euros (25cl) <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="yellowCoinSrc" alt="logo jeton jaune"></li>
+          <li>Pichet blonde : 9 euros (1L)</li>
         </ul>
     </swiper-slide>
     <swiper-slide>
