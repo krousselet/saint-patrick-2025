@@ -53,6 +53,10 @@ a {
   font-family: "MedievalSharp", serif;
 }
 
+.green {
+  color: lime;
+}
+
 // SCROLLBARS
 
 ::-webkit-scrollbar {

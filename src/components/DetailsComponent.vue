@@ -23,8 +23,9 @@
         <h2>Prix</h2>
         <ul>
           <li>L'entrée est à 5 euros</li>
+          <li>L'entrée est <span class="green">gratuite</span> pour les <span class="green"> - 12 ans</span> </li>
           <li>1 kilt = une boisson offerte</li>
-          <li>La consommation d'alcool est <br> <span class="forbidden">interdite</span> <br> aux mineurs</li>
+          <li>La consommation d'alcool est <br> <span class="forbidden">interdite</span>aux mineurs</li>
         </ul>
       </swiper-slide>
       <swiper-slide>
@@ -49,31 +50,42 @@
         <ul>
           <li>Le happy quart d'heure permettra de gagner une boisson en faisant un centre sur la cible (3 essais par participant)</li>
           <li>Les bouchons d'oreilles sont fournis à l'entrée pour le concert (fortement conseillé)</li>
+          <li>Vous pouvez choisir de participer à une tombola calendrier en vous inscrivant à l'entrée <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"></li>
         </ul>
     </swiper-slide>
     <swiper-slide>
         <h2>Boissons Alcool</h2>
         <ul>
           <li>Bière blonde (25cl) : 2,5 euros</li>
-          <li>Bière ambrée (25cl) : 3,5 euros</li>
-          <li>Bière verte (25cl) : 3,5 euros</li>
+          <li><img :src="blondeBeerSrc" alt="logo biere blonde"> 2,5 euros <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="yellowCoinSrc" alt="logo jeton jaune"></li>
+          <li><img :src="amberBeerSrc" alt="logo biere ambree"> : 3,5 euros <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="yellowCoinSrc" alt="logo jeton jaune"></li>
+          <li><img :src="wizardBeerSrc" alt="logo biere blonde"> : 3,5 euros <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="yellowCoinSrc" alt="logo jeton jaune"></li>
           <li>Pichet blonde : 9 euros</li>
         </ul>
     </swiper-slide>
     <swiper-slide>
         <h2>Boissons Sans Alcool</h2>
         <ul>
-          <li>Bière : 2 euros</li>
-          <li>Coca, coca zéro, Orangina, Ice Tea, Oasis : 2 euros</li>
-          <li>Cristaline (0,5l) : 1 euros</li>
+          <li>Bière : 2 euros <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"></li>
+          <li>Coca, coca zéro, Orangina, Ice Tea, Tropical : 2 euros <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"></li>
+          <li>Cristaline (0,5l) : 1 euro <img :src="greenCoinSrc" alt="logo jeton vert"></li>
         </ul>
     </swiper-slide>
     <swiper-slide>
         <h2>Tarifs restauration</h2>
         <ul>
-          <li>Hot dog : 3,5 euros</li>
-          <li>Sandwich : x euros</li>
-          <li>Confiseries : 1 euros</li>
+          <li>Hot dog : 3,5 euros <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="yellowCoinSrc" alt="logo jeton jaune"></li>
+          <li>Sandwich rosette beurre : 3 euros <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"> <img :src="greenCoinSrc" alt="logo jeton vert"></li>
+          <li>Confiseries : 1 euro <img :src="greenCoinSrc" alt="logo jeton vert"></li>
+        </ul>
+    </swiper-slide>
+    <swiper-slide>
+        <h2>Paiement</h2>
+        <ul>
+          <li>Le paiement se fait à l'entrée en échange de jetons.</li>
+          <li>Deux jetons uniquement sont disponibles</li>
+          <li><img :src="yellowCoinSrc" alt="logo jeton jaune"> : 0,5 euro</li>
+          <li><img :src="greenCoinSrc" alt="logo jeton vert"> : 1 euro</li>
         </ul>
     </swiper-slide>
     </swiper-container>
@@ -82,28 +94,73 @@
   <script>
   import 'swiper/swiper-bundle.css';
   import { register } from 'swiper/element/bundle';
+  import { ref, computed, onMounted, onUnmounted } from "vue";
+  import blondBeerMobileSrc from "../assets/images/images/mobile/beer-blond-mobile.svg";
+  import blondBeerDesktopSrc from "../assets/images/images/desktop/beer-blond-desktop.svg";
+  import amberBeerMobileSrc from "../assets/images/images/mobile/beer-amber-mobile.svg";
+  import amberBeerDesktopSrc from "../assets/images/images/desktop/beer-amber-desktop.svg";
+  import wizardBeerMobileSrc from "../assets/images/images/mobile/beer-wizard-mobile.svg";
+  import wizardBeerDesktopSrc from "../assets/images/images/desktop/beer-wizard-desktop.svg";
+  import coinYellowMobileSrc from "../assets/images/images/mobile/coin-yellow-mobile.svg";
+  import coinYellowDesktopSrc from "../assets/images/images/desktop/coin-yellow-desktop.svg";
+  import coinGreenMobileSrc from "../assets/images/images/mobile/coin-green-mobile.svg";
+  import coinGreenDesktopSrc from "../assets/images/images/desktop/coin-green-desktop.svg";
   
   export default {
   name: "SwiperWithBreakpoints",
   setup() {
+    const isDesktop = ref(window.matchMedia("(min-width: 992px)").matches);
+
+    const updateIsDesktop = () => {
+      isDesktop.value = window.matchMedia("(min-width: 992px)").matches;
+    };
+
+    onMounted(() => {
+      window.addEventListener("resize", updateIsDesktop);
+    });
+
+    onUnmounted(() => {
+      window.removeEventListener("resize", updateIsDesktop);
+    });
+
+    const blondeBeerSrc = computed(() =>
+      isDesktop.value ? blondBeerDesktopSrc : blondBeerMobileSrc
+    );
+
+    const wizardBeerSrc = computed(() =>
+      isDesktop.value ? wizardBeerDesktopSrc : wizardBeerMobileSrc
+    );
+
+    const amberBeerSrc = computed(() =>
+      isDesktop.value ? amberBeerDesktopSrc : amberBeerMobileSrc
+    );
+
+    const yellowCoinSrc = computed(() =>
+      isDesktop.value ? coinYellowDesktopSrc : coinYellowMobileSrc
+    )
+
+    const greenCoinSrc = computed(() =>
+      isDesktop.value ? coinGreenDesktopSrc : coinGreenMobileSrc
+    )
+
     // Register Swiper Web Components globally
     register();
 
     // Define breakpoints
     const swiperBreakpoints = {
-      320: { // Small devices
+      320: {
         slidesPerView: 1,
         spaceBetween: 10,
       },
-      768: { // Tablets
+      991: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      2048: {
         slidesPerView: 2,
         spaceBetween: 20,
       },
-      991: { // Tablets
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      2048: { // large
+      4080: {
         slidesPerView: 4,
         spaceBetween: 30,
 
@@ -112,6 +169,12 @@
 
     return {
       swiperBreakpoints,
+      isDesktop,
+      blondeBeerSrc,
+      wizardBeerSrc,
+      amberBeerSrc,
+      yellowCoinSrc,
+      greenCoinSrc
     };
   },
 };
@@ -132,8 +195,17 @@
       text-transform: uppercase;
     }
 
-    ul li {
+    span {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    li {
       font-size: 1rem;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
     }
 
     swiper-container {
