@@ -15,7 +15,7 @@
       </div>
       <div class="boddah-container">
          <a
-      href="https://www.facebook.com/p/Boddah-Quest-tribute-Nirvana-100078758354425/"
+      href="https://www.facebook.com/share/14pQEdHoAH/"
       target="_blank"
           >
              <img :src="boddahLogoSrc" alt="logo du groupe boddah" />
